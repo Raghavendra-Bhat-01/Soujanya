@@ -1,223 +1,337 @@
+<html __fvdsurfcanyoninserted="1" class=" clickberry-extension clickberry-extension-standalone clickberry-extension clickberry-extension-standalone clickberry-extension clickberry-extension-standalone"><head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        /* If you can't see it just hit space in here*/
+        body {
+            font-family:'Wendy One', sans-serif;
+        }
+        
+        body {
+background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #374566), color-stop(100%, #010203));
+background-image: -webkit-radial-gradient(#374566, #010203);
+background-image: -moz-radial-gradient(#374566, #010203);
+background-image: -o-radial-gradient(#374566, #010203);
+background-image: radial-gradient(#374566, #010203);
+}
+        span {
+            text-transform: uppercase;
+        }
+        .container {
+            width: 800px;
+            height: 420px;
+            padding: 10px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .balloon {
+            width: 738px;
+            margin: 0 auto;
+            padding-top: 30px;
+            position: relative;
+        }
+        .balloon > div {
+            width: 104px;
+            height: 140px;
+            background: rgba(182, 15, 97, 0.9);
+            border-radius: 0;
+            border-radius: 80% 80% 80% 80%;
+            margin: 0 auto;
+            position: absolute;
+            padding: 10px;
+            box-shadow: inset 17px 7px 10px rgba(182, 15, 97, 0.9);
+            -webkit-transform-origin: bottom center;
+        }
+        .balloon > div:nth-child(1) {
+            background: rgba(182, 15, 97, 0.9);
+            left: 0;
+            box-shadow: inset 10px 10px 10px rgba(135, 11, 72, 0.9);
+            -webkit-animation: balloon1 6s ease-in-out infinite;
+            -moz-animation: balloon1 6s ease-in-out infinite;
+            -o-animation: balloon1 6s ease-in-out infinite;
+            animation: balloon1 6s ease-in-out infinite;
+        }
+        .balloon > div:nth-child(1):before {
+            color: rgba(182, 15, 97, 0.9);
+        }
+        .balloon > div:nth-child(2) {
+            background: rgba(242, 112, 45, 0.9);
+            left: 120px;
+            box-shadow: inset 10px 10px 10px rgba(222, 85, 14, 0.9);
+            -webkit-animation: balloon2 6s ease-in-out infinite;
+            -moz-animation: balloon2 6s ease-in-out infinite;
+            -o-animation: balloon2 6s ease-in-out infinite;
+            animation: balloon2 6s ease-in-out infinite;
+        }
+        .balloon > div:nth-child(2):before {
+            color: rgba(242, 112, 45, 0.9);
+        }
+        .balloon > div:nth-child(3) {
+            background: rgba(45, 181, 167, 0.9);
+            left: 240px;
+            box-shadow: inset 10px 10px 10px rgba(35, 140, 129, 0.9);
+            -webkit-animation: balloon4 6s ease-in-out infinite;
+            -moz-animation: balloon4 6s ease-in-out infinite;
+            -o-animation: balloon4 6s ease-in-out infinite;
+            animation: balloon4 6s ease-in-out infinite;
+        }
+        .balloon > div:nth-child(3):before {
+            color: rgba(45, 181, 167, 0.9);
+        }
+        .balloon > div:nth-child(4) {
+            background: rgba(190, 61, 244, 0.9);
+            left: 360px;
+            box-shadow: inset 10px 10px 10px rgba(173, 14, 240, 0.9);
+            -webkit-animation: balloon1 5s ease-in-out infinite;
+            -moz-animation: balloon1 5s ease-in-out infinite;
+            -o-animation: balloon1 5s ease-in-out infinite;
+            animation: balloon1 5s ease-in-out infinite;
+        }
+        .balloon > div:nth-child(4):before {
+            color: rgba(190, 61, 244, 0.9);
+        }
+        .balloon > div:nth-child(5) {
+            background: rgba(180, 224, 67, 0.9);
+            left: 480px;
+            box-shadow: inset 10px 10px 10px rgba(158, 206, 34, 0.9);
+            -webkit-animation: balloon3 5s ease-in-out infinite;
+            -moz-animation: balloon3 5s ease-in-out infinite;
+            -o-animation: balloon3 5s ease-in-out infinite;
+            animation: balloon3 5s ease-in-out infinite;
+        }
+        .balloon > div:nth-child(5):before {
+            color: rgba(180, 224, 67, 0.9);
+        }
+        .balloon > div:nth-child(6) {
+            background: rgba(242, 194, 58, 0.9);
+            left: 600px;
+            box-shadow: inset 10px 10px 10px rgba(234, 177, 15, 0.9);
+            -webkit-animation: balloon2 3s ease-in-out infinite;
+            -moz-animation: balloon2 3s ease-in-out infinite;
+            -o-animation: balloon2 3s ease-in-out infinite;
+            animation: balloon2 3s ease-in-out infinite;
+        }
+        .balloon > div:nth-child(6):before {
+            color: rgba(242, 194, 58, 0.9);
+        }
+        .balloon > div:before {
+            color: rgba(182, 15, 97, 0.9);
+            position: absolute;
+            bottom: -11px;
+            left: 52px;
+            content:"▲";
+            font-size: 1em;
+        }
+        span {
+            font-size: 4.8em;
+            color: white;
+            position: relative;
+            top: 30px;
+            left: 50%;
+            margin-left: -27px;
+        }
+        /*BALLOON 1 4*/
+        @-webkit-keyframes balloon1 {
+            0%, 100% {
+                -webkit-transform: translateY(0) rotate(-6deg);
+            }
+            50% {
+                -webkit-transform: translateY(-20px) rotate(8deg);
+            }
+        }
+        @-moz-keyframes balloon1 {
+            0%, 100% {
+                -moz-transform: translateY(0) rotate(-6deg);
+            }
+            50% {
+                -moz-transform: translateY(-20px) rotate(8deg);
+            }
+        }
+        @-o-keyframes balloon1 {
+            0%, 100% {
+                -o-transform: translateY(0) rotate(-6deg);
+            }
+            50% {
+                -o-transform: translateY(-20px) rotate(8deg);
+            }
+        }
+        @keyframes balloon1 {
+            0%, 100% {
+                transform: translateY(0) rotate(-6deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(8deg);
+            }
+        }
+        /* BAllOON 2 5*/
+        @-webkit-keyframes balloon2 {
+            0%, 100% {
+                -webkit-transform: translateY(0) rotate(6eg);
+            }
+            50% {
+                -webkit-transform: translateY(-30px) rotate(-8deg);
+            }
+        }
+        @-moz-keyframes balloon2 {
+            0%, 100% {
+                -moz-transform: translateY(0) rotate(6deg);
+            }
+            50% {
+                -moz-transform: translateY(-30px) rotate(-8deg);
+            }
+        }
+        @-o-keyframes balloon2 {
+            0%, 100% {
+                -o-transform: translateY(0) rotate(6deg);
+            }
+            50% {
+                -o-transform: translateY(-30px) rotate(-8deg);
+            }
+        }
+        @keyframes balloon2 {
+            0%, 100% {
+                transform: translateY(0) rotate(6deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(-8deg);
+            }
+        }
+        /* BAllOON 0*/
+        @-webkit-keyframes balloon3 {
+            0%, 100% {
+                -webkit-transform: translate(0, -10px) rotate(6eg);
+            }
+            50% {
+                -webkit-transform: translate(-20px, 30px) rotate(-8deg);
+            }
+        }
+        @-moz-keyframes balloon3 {
+            0%, 100% {
+                -moz-transform: translate(0, -10px) rotate(6eg);
+            }
+            50% {
+                -moz-transform: translate(-20px, 30px) rotate(-8deg);
+            }
+        }
+        @-o-keyframes balloon3 {
+            0%, 100% {
+                -o-transform: translate(0, -10px) rotate(6eg);
+            }
+            50% {
+                -o-transform: translate(-20px, 30px) rotate(-8deg);
+            }
+        }
+        @keyframes balloon3 {
+            0%, 100% {
+                transform: translate(0, -10px) rotate(6eg);
+            }
+            50% {
+                transform: translate(-20px, 30px) rotate(-8deg);
+            }
+        }
+        /* BAllOON 3*/
+        @-webkit-keyframes balloon4 {
+            0%, 100% {
+                -webkit-transform: translate(10px, -10px) rotate(-8eg);
+            }
+            50% {
+                -webkit-transform: translate(-15px, 20px) rotate(10deg);
+            }
+        }
+        @-moz-keyframes balloon4 {
+            0%, 100% {
+                -moz-transform: translate(10px, -10px) rotate(-8eg);
+            }
+            50% {
+                -moz-transform: translate(-15px, 10px) rotate(10deg);
+            }
+        }
+        @-o-keyframes balloon4 {
+            0%, 100% {
+                -o-transform: translate(10px, -10px) rotate(-8eg);
+            }
+            50% {
+                -o-transform: translate(-15px, 10px) rotate(10deg);
+            }
+        }
+        @keyframes balloon4 {
+            0%, 100% {
+                transform: translate(10px, -10px) rotate(-8eg);
+            }
+            50% {
+                transform: translate(-15px, 10px) rotate(10deg);
+            }
+        }
+        h1 {
+            position: relative;
+            top: 200px;
+            text-align: center;
+            color: white;
+            font-size: 3.5em;
+        }
+    </style>
+    <script>
+        window.open = function() {};
+        window.print = function() {};
+        // Support hover state for mobile.
+        if (false) {
+            window.ontouchstart = function() {};
+        }
+    </script>
+    <script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script>
+    <meta content="clickberry-extension-here">
+    <meta content="clickberry-extension-here">
+    <style type="text/css"></style>
+    <style type="text/css"></style>
+<style type="text/css"></style><style type="text/css"></style><script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script><meta content="clickberry-extension-here"></head>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Responsive Bootstrap 4 Magazine/Blog Theme">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    
-
-  <title>The Drawing Artist</title>
-
-  
-</head>
 <body>
-
-  <header>
-      
-    <nav class="navbar navbar-expand-md navbar-light bg-warning absolute-top rounded">
-      <div class="container">
-
-        <button class="navbar-toggler order-2 order-md-1" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-left navbar-right" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse order-3 order-md-2" id="navbar-left">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="page-Home.html">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Posts</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown02">
-                <a class="dropdown-item" href="post-sketches.html">Skteches</a>
-                <a class="dropdown-item" href="post-paintings.html">Paintings</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <a class="navbar-brand mx-auto order-1 order-md-3" href="index.html"><img src="img/Logo.png"></img></a>
-
-        <div class="collapse navbar-collapse order-4 order-md-4" id="navbar-right">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="page-about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="page-contact.html">Contact</a>
-            </li>
-          </ul>
-          <form class="form-inline" role="search">
-            <input class="search js-search form-control form-control-rounded mr-sm-2" type="text" title="Enter search query here.." placeholder="Search.." aria-label="Search">
-          </form>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-    <div class="container-fluid" style="background-image: url(img/background.jpg);">
-        <!-- Control the column width, and how they should appear on different devices -->
-        <div class="row">
-           
-            <div class="col-sm-6">
-                <div class="about-img">
-                    <!-- <svg width="300" height="500">
-                        <ellipse cx="100" cy="150" rx="95" ry="135"
-                        stroke="green" stroke-width="4" fill="background-image: url(img/background.jpg);" />
-                    Sorry, your browser does not support inline SVG.
-                    </svg>  -->
-                    <img src="img/Admin.jpg" width=200px; height=300px; radius=50%;>
-                   </div>
-                   <center><h2 style="margin-bottom: 50px;">Ms. Soujanya Shettigar</h2></center>
+    <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet" type="text/css">
+    <div class="container">
+        <div class="balloon">
+            <div><span>☺</span>
             </div>
-            <div class="col-sm-6">
-                <div class="about">
-                    <h2 style="text-align:center"> <u> About Me </u> </h2>
-                    <p class="font-weight-lighter">
-                      Hi, I'm SOUJANYA, a self-taught Front End Developer based in BANGALURU, INDIA.
-                      My hobbies are Drawing, Paintings learning new things, watching YouTube.
-                    </p>
-                </div>    
+            <div><span>B</span>
+            </div>
+            <div><span>D</span>
+            </div>
+            <div><span>A</span>
+            </div>
+            <div><span>Y</span>
+            </div>
+            <div><span>!</span>
             </div>
         </div>
+         <h1>Soujanya</h1>
+
+            
+        
+
     </div>
+    <center>
+        <a href="home.html" class="btn btn-primary">Click Here to View Surprise...</a>
+        <br><br>
+        <audio controls>
+            
+            <source src="img/tune.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
     
-    <div class="row">
-           
-        <div class="col-sm-12">
-            <div class="portfolio">
-                   <h2 style="text-align:center"> <u> Portfolio </u> </h2>
-                   <div class="row" style="padding-left: 100px;">
-                        <div class="col-sm-4" style="margin-bottom: 20px;">
-                            <div class="card" style="width:400px">
-                                <img class="card-img-top" src="img/Sample_img (3).jpg" alt="Card image" style="width:100%">
-                                <div class="card-body">
-                                    <h4 class="card-title">Skteches</h4>
-                                    <p class="card-text">Some model skteches</p>
-                                    <a href="View_img.html" class="btn btn-primary">View More...</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4" style="margin-bottom: 20px;">
-                            <div class="card" style="width:400px">
-                                <img class="card-img-top" src="img/Sample_img (12).jpg" alt="Card image" style="width:100%">
-                                <div class="card-body">
-                                    <h4 class="card-title">Paintings</h4>
-                                    <p class="card-text">Some model paintings</p>
-                                    <a href="View_img.html" class="btn btn-primary">View More...</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4" style="margin-bottom: 20px;">
-                            <div class="card" style="width:400px">
-                                <img class="card-img-top" src="img/Web_design.jpg" alt="Card image" style="width:100%">
-                                <div class="card-body">
-                                    <h4 class="card-title">Web Design</h4>
-                                    <p class="card-text">Some model Website templates</p>
-                                    <a href="View_img.html" class="btn btn-primary">View More...</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>    
-            </div> 
-        </div>   
-    </div>   
+    
+    
+    </center>
 
-    <section id="contact">
-			<div class="section-content">
-				<h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
-			</div>
-			<div class="contact-section">
-			<div class="container">
-				<form>
-          <div class="row">
-					<div class="col-md-6 form-line">
-			  			<div class="form-group">
-			  				<label for="exampleInputUsername">Your name</label>
-					    	<input type="text" class="form-control" id="" placeholder=" Enter Name">
-				  		</div>
-				  		<div class="form-group">
-					    	<label for="exampleInputEmail">Email Address</label>
-					    	<input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id">
-					  	</div>	
-					  	<div class="form-group">
-					    	<label for="telephone">Mobile No.</label>
-					    	<input type="tel" class="form-control" id="telephone" placeholder=" Enter 10-digit mobile no.">
-			  			</div>
-			  		</div>
-			  		<div class="col-md-6">
-			  			<div class="form-group">
-			  				<label for ="description"> Message</label>
-			  			 	<textarea  class="form-control" id="description" placeholder="Enter Your Message"></textarea>
-			  			</div>
-			  			<div>
+    
 
-			  				<button type="button" class="btn btn-info submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message </button>
-			  			</div>
-			  			
-          </div>
-          </div>
-				</form>
-			</div>
-    </section>
+    <script>
+        
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage('resize', "*");
+        }
+    </script>
 
-    <footer style="width: 100%";>
-      <div class="container-fluid bg-primary py-3">
-     <div class="container">
-       <div class="row">
-         <div class="col-md-7">
-             <div class="row py-0">
-           <div class="col-sm-1 hidden-md-down">
-               <a class="bg-circle bg-info" href="#">
-                 <i class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
-               </a>
-             </div>
-             <div class="col-sm-11 text-white">
-                 <div><h4>  Contact</h4>
-                     <p>   Soujanya.com</p>
-                 </div>
-             </div>
-             </div>
-         </div>
-         <div class="col-md-5">
-           <div class="d-inline-block">
-             <div class="bg-circle-outline d-inline-block" style="background-color:#3b5998">
-               <a href="https://www.facebook.com/"><i class="fa fa-2x fa-fw fa-facebook text-white"></i>
-     </a>
-             </div>
-             <div class="bg-circle-outline d-inline-block" style="background-color:#4099FF">
-               <a href="https://twitter.com/">
-                 <i class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
-             </div>
- 
-             <div class="bg-circle-outline d-inline-block" style="background-color:#0077B5">
-               <a href="https://www.linkedin.com/company/">
-                 <i class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
-             </div>
-             <div class="bg-circle-outline d-inline-block" style="background-color:#d34836">
-               <a href="https://www.google.com/">
-                 <i class="fa fa-2x fa-fw fa-instagram text-white"></i></a>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-     </div>
- </footer>
-     <!--/.footer-->
-     <div class="footer-copyright text-center py-3">© BY:
-      <a href="https://baburaghavendra.github.io.com/"> BABURAGHAVENDRA</a>
-    </div>
-     <!--/.footer-bottom--> 
- 
 
-  </body>
-  </html>
+</body></html>
